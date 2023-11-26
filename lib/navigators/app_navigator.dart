@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:solid_skeleton/modules/home/screens/home_screen.dart';
+import 'package:solid_skeleton/modules/splash/screens/splash_screen.dart';
 import 'package:solid_skeleton/navigators/route_names.dart';
 
 class AppNavigator {
@@ -25,11 +27,11 @@ class AppNavigator {
   static dynamic getScreenByName(String? name, Object? arguments) {
     switch (name) {
       case RouteNames.splashScreen:
-        return Container();
+        return const SplashScreen();
       case RouteNames.homeScreen:
-        return Container();
+        return const HomeScreen();
       default:
-        return Container();
+        return const SplashScreen();
     }
   }
 }
